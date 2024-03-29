@@ -38,3 +38,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+# Postgres Data
+db/pgdata
