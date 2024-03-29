@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: transmit
+      POSTGRES_PASSWORD: transmit
+      POSTGRES_DB: transmit
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+  active-mq:
+      image: rmohr/activemq:latest
+      ports:
+        - "8161:8161"
+        - "61616:61616"

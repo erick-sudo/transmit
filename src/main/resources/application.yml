@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
